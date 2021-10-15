@@ -1,0 +1,16 @@
+This repo contains only two files: ID_cleavage_site.py and subcell_location_cytosol.tsv. 
+
+The .py script runs the whole pipeline using the .tsv file as input. Note that the .tsv file
+contains a table with quantitative and qualitative data on a subset of the human proteome that is localized in the cytosol. In brief, this pipeline involves extracting UniProt IDs from
+the .tsv file, fetching FASTA amino acid sequences using these UniProt IDS, and then determining if a PLP cleavage site is present within these sequences. Subsequently, PDB files for hits 
+are fetched and analyzed for solvent accessibility of residues using GetArea (see references below). Cleavage sites on the outside of the protein were defined as true PLP substrates, and 
+further analyzed. A highly detailed description of all functions and code included in ID_cleavage_site.py is documented within the script itself. 
+
+
+
+
+Fraczkiewicz, R; Braun, W. (1998) J. Comp. Chem., 19, 319.
+Fraczkiewicz, R; Braun, W. A New Efficient Algorithm for Calculating Solvent Accessible Surface Areas of Macromolecules, ECCC3; Nov. 1996; Northern Illinois Univ.
+Eisenberg, D; McLachlan, AD. (1986) Nature, 319, 199.
+Markley, JL; Bax, A; Arata, Y; Hilbers, CW; Kaptein, R; Sykes, BD; Wright, PE; Wuthrich, K. (1998) Pure & Appl. Chem., 70, 117.
+Wesson, L; Eisenberg, D. (1992) Protein Sci., 1, 227. 
